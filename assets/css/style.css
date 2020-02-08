@@ -6,7 +6,7 @@
     background:url(trees.png); 
     height: 500px; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
     background-size: cover; 
     
   }
@@ -126,7 +126,7 @@
   }
   
   input[type=submit]:hover {
-    background-color: #4aaaa5;
+    background-color: #0ee6db;
   }
   
   .container {
@@ -156,15 +156,8 @@
     display: table;
     clear: both;
   }
-  
-  @media screen and (max-width: 600px) {
-    .column, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
 
-#profolio{
+#portfolio{
   padding: 20px;
   height: 720px;
   color: #4aaaa5;
@@ -197,4 +190,29 @@
     text-align: center;
     background: #4aaaa5;
     border-bottom: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .column, .container,input[type=text], select, textarea{
+    width: 100%;
   }
+  body{
+      width: 100%;
+      margin-top: 0;}
+ }
+@media screen and (max-width: 768px) {
+  .column, .container,input[type=text], select, textarea{
+    width: 100%;
+  }
+  #portfolio{
+  max-width: 100%;
+  height: auto;}
+ }
+ @media screen and (max-width: 640px) {
+  #logo,.column, .container,input[type=text], select, textarea{
+    width: 100%;
+  }
+  .topnav a{
+    float: none;
+  }
+}
