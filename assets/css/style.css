@@ -32,6 +32,7 @@
 
  .topnav a {
       padding-left: 10px;
+      padding-right:10px;
       line-height: 100px;
       float: right;
       color: #777777;
@@ -43,7 +44,6 @@
 
   #about {
     padding: 20px;
-    height: 580px;
     color: #4aaaa5;
     background:#ffffff;
     width: 100%;
@@ -84,14 +84,13 @@
   .mainimage{
     float: left;
     width: 180px;
-    height: 220px;
     margin: 0 auto;
     margin-right: 10px;
   }
 
   p{
     color: #777777;
-    line-height: 40px;
+    line-height: 20px;
   }
 
   footer {
@@ -100,6 +99,7 @@
     border-top-width: 8px;
     border-color:#4aaaa5;
     border-top-style: solid;
+    color: #c0bdbd;
     height: 50px;
     width: 100%;
     position: fixed;
@@ -130,7 +130,7 @@
   }
   
   .container {
-    float: center;
+    float: none;
     border-radius: 5px;
     background-color: #ffffff;
     padding: 10px;
@@ -193,26 +193,43 @@
 }
 
 @media screen and (max-width: 980px) {
-  .column, .container,input[type=text], select, textarea{
+  .column,input[type=text], select, textarea{
     width: 100%;
   }
-  body{
-      width: 100%;
-      margin-top: 0;}
- }
+  .container,#portfolio,#about{
+    max-width: 720px;
+    float:left;
+    margin-left: 10px;
+  }
+}
 @media screen and (max-width: 768px) {
-  .column, .container,input[type=text], select, textarea{
+  .column,input[type=text], select, textarea{
     width: 100%;
   }
-  #portfolio{
-  max-width: 100%;
-  height: auto;}
+  .container,#portfolio,#about{
+    max-width: 720px;
+    float: none;
+    margin-left: 20px;
+  }
  }
- @media screen and (max-width: 640px) {
-  #logo,.column, .container,input[type=text], select, textarea{
+@media screen and (max-width: 640px) {
+  #logo,.column,input[type=text], select, textarea{
     width: 100%;
   }
   .topnav a{
     float: none;
+  }
+  #portfolio{
+    height: 1100px;
+    width:350px;
+    float: none;
+    margin-left: 145px;
+  }
+  .container,#about{
+    max-width: 600px;
+    margin-left: 20px;
+  }
+  .mainimage{
+    width: 100%;
   }
 }
